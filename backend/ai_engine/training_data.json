@@ -1,0 +1,16 @@
+{
+  "samples": [
+    {
+      "similarity": 0.68,
+      "concept_score": 0.35,
+      "keyword_score": 0.3,
+      "predicted_grade": "Partial",
+      "actual_grade": "Good"
+    }
+  ],
+  "weights": {
+    "similarity": 0.5,
+    "concept": 0.25,
+    "keyword": 0.25
+  }
+}

@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Results — Vocentra</title>
+    <link rel="stylesheet" href="/src/styles/theme.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=DM+Serif+Display:ital@0;1&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="page-result" style="min-height: 100vh">
+    <!-- Background elements -->
+    <div class="cursor" id="cursor"></div>
+    <div class="cursor-ring" id="cursorRing"></div>
+    <div class="scene">
+      <div class="blob blob-1"></div>
+      <div class="blob blob-2"></div>
+      <div class="blob blob-3"></div>
+    </div>
+    <div class="grid-mesh"></div>
+
+    <!-- Nav -->
+    <nav class="nav">
+      <div class="nav-inner glass" id="navInner">
+        <a href="/index.html" class="nav-brand">
+          <svg class="nav-logo-svg" width="30" height="30" viewBox="0 0 32 32">
+            <defs>
+              <linearGradient id="navLG" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#63b3ed" />
+                <stop offset="100%" stop-color="#7c3aed" />
+              </linearGradient>
+            </defs>
+            <polygon
+              points="16,1 31,8.5 31,23.5 16,31 1,23.5 1,8.5"
+              fill="none"
+              stroke="url(#navLG)"
+              stroke-width="1.5"
+            />
+            <circle cx="16" cy="16" r="3.2" fill="url(#navLG)" />
+          </svg>
+          <span class="nav-brand-name">Vocentra</span>
+        </a>
+        <div class="nav-right">
+          <button class="theme-toggle" id="themeToggle">
+            <div class="toggle-thumb">
+              <span class="toggle-icon" id="toggleIcon">🌙</span>
+            </div>
+          </button>
+          <a href="/upload.html" class="nav-cta">New Analysis</a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Topbar info -->
+    <div
+      class="result-topbar reveal"
+      style="margin: 6rem auto 2rem; max-width: 1400px; padding: 0 1.5rem"
+    >
+      <div class="result-topbar-left">
+        <div class="tag">Analysis Complete</div>
+        <h1 class="page-title">Your Results</h1>
+        <p class="page-sub">Semantic evaluation of your explanation video</p>
+      </div>
+    </div>
+
+    <!-- React Root -->
+    <main
+      class="result-main"
+      style="max-width: 1400px; margin: 0 auto; padding: 0 1.5rem 3rem"
+    >
+      <div id="result-root"></div>
+    </main>
+
+    <script src="/src/utils/animations.js"></script>
+    <script src="/src/utils/legacy-script.js"></script>
+    <script type="module" src="/src/pages/ResultPage.jsx"></script>
+  </body>
+</html>

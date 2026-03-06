@@ -1,0 +1,105 @@
+{
+  "video_id": "vid-12345",
+  "transcript": [
+    {
+      "start": 0.5,
+      "end": 4.2,
+      "speaker": "spk-1",
+      "text": "Welcome to our presentation on the architecture of modern web applications.",
+      "confidence": 0.98
+    },
+    {
+      "start": 4.5,
+      "end": 8.0,
+      "speaker": "spk-1",
+      "text": "Today, we'll talk about microservices and how they interact with cloud infrastructure.",
+      "confidence": 0.95
+    },
+    {
+      "start": 8.5,
+      "end": 12.0,
+      "speaker": "spk-1",
+      "text": "Here on the whiteboard, you can see the API Gateway routing requests.",
+      "confidence": 0.93
+    },
+    {
+      "start": 12.5,
+      "end": 16.8,
+      "speaker": "spk-2",
+      "text": "Are we using PostgreSQL for the database layer?",
+      "confidence": 0.89
+    },
+    {
+      "start": 17.0,
+      "end": 22.0,
+      "speaker": "spk-1",
+      "text": "Yes, absolutely. PostgreSQL handles the core relational data efficiently.",
+      "confidence": 0.96
+    }
+  ],
+  "visual_context": [
+    {
+      "start": 0.0,
+      "end": 8.0,
+      "objects": [
+        { "label": "person", "conf": 0.99 },
+        { "label": "laptop", "conf": 0.92 }
+      ],
+      "scene": "office",
+      "actions": ["talking", "gesturing"],
+      "ocr": ["Modern Web Architecture"],
+      "caption": "A person standing and presenting in front of a screen.",
+      "thumbnail_url": "/assets/placeholder-thumb-1.jpg"
+    },
+    {
+      "start": 8.0,
+      "end": 17.0,
+      "objects": [
+        { "label": "whiteboard", "conf": 0.98 },
+        { "label": "marker", "conf": 0.88 }
+      ],
+      "scene": "classroom",
+      "actions": ["writing", "pointing"],
+      "ocr": ["API Gateway", "Microservices", "Cloud"],
+      "caption": "Teacher explaining a diagram on a whiteboard.",
+      "thumbnail_url": "/assets/placeholder-thumb-2.jpg"
+    },
+    {
+      "start": 17.0,
+      "end": 22.0,
+      "objects": [{ "label": "database icon", "conf": 0.91 }],
+      "scene": "office",
+      "actions": ["nodding"],
+      "ocr": ["PostgreSQL", "Relational Data"],
+      "caption": "Presenter nodding and pointing to the database layer.",
+      "thumbnail_url": "/assets/placeholder-thumb-3.jpg"
+    }
+  ],
+  "similarity": {
+    "overall": 0.91,
+    "breakdown": {
+      "speech": 0.95,
+      "visual": 0.85,
+      "ocr": 0.9,
+      "temporal": 0.88
+    }
+  },
+  "processing": {
+    "stages": [
+      { "name": "Upload Data", "duration": 1.2, "status": "success" },
+      { "name": "Extract Audio", "duration": 0.8, "status": "success" },
+      { "name": "Speech to Text", "duration": 4.5, "status": "success" },
+      { "name": "Diarization", "duration": 2.1, "status": "success" },
+      { "name": "Frame Extraction", "duration": 5.0, "status": "success" },
+      { "name": "Object Detection", "duration": 6.2, "status": "success" },
+      { "name": "OCR", "duration": 3.8, "status": "success" },
+      { "name": "Captioning", "duration": 4.1, "status": "success" },
+      { "name": "Semantic Fusion", "duration": 1.5, "status": "success" },
+      { "name": "Scoring", "duration": 0.5, "status": "success" }
+    ],
+    "timestamps": {
+      "start": "2026-03-06T10:00:00Z",
+      "end": "2026-03-06T10:00:30Z"
+    }
+  }
+}
