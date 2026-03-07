@@ -18,6 +18,8 @@ import { getJobStatus } from "../services/apiClient";
 
 export default function PipelineTracker({ file, jobId, onComplete, onCancel }) {
   const [currentStage, setCurrentStage] = useState(0);
+  const [backendProgress, setBackendProgress] = useState(0);
+  const [timeRemaining, setTimeRemaining] = useState(90); // Start with 90s estimate
   const [error, setError] = useState(null);
 
   useEffect(() => {
@@ -31,17 +33,37 @@ export default function PipelineTracker({ file, jobId, onComplete, onCancel }) {
           const res = await getJobStatus(jobId);
           if (res.status === "completed") {
             setCurrentStage(STAGES.length - 1);
+            setBackendProgress(100);
             clearInterval(pollInterval);
             setTimeout(() => onComplete(), 800);
           } else if (res.status === "failed") {
-            setError("Processing failed on server.");
+            setError(res.error || "Processing failed on server.");
             clearInterval(pollInterval);
           } else {
-            // Keep ticking stages slowly while processing
-            setCurrentStage((prev) => {
-              if (prev < STAGES.length - 2) return prev + 1;
-              return prev;
+            // Use real progress from backend
+            setBackendProgress(res.progress || 0);
+
+            // Map percentage to stage index
+            const progress = res.progress || 0;
+            let stageIdx = 0;
+            if (progress >= 100) stageIdx = 9;
+            else if (progress >= 95) stageIdx = 8;
+            else if (progress >= 85) stageIdx = 7;
+            else if (progress >= 80) stageIdx = 6;
+            else if (progress >= 75) stageIdx = 5;
+            else if (progress >= 70) stageIdx = 4;
+            else if (progress >= 55) stageIdx = 3;
+            else if (progress >= 40) stageIdx = 2;
+            else if (progress >= 20) stageIdx = 1;
+            else if (progress >= 10) stageIdx = 0;
+
+            // Simple linear estimate reduction
+            setTimeRemaining((prev) => {
+              const target = Math.max(5, 90 - Math.floor(res.progress * 0.9));
+              return target;
             });
+
+            setCurrentStage(stageIdx);
           }
         } catch (err) {
           console.error("Polling error", err);
@@ -55,18 +77,17 @@ export default function PipelineTracker({ file, jobId, onComplete, onCancel }) {
       // Fake progress if no jobId yet (e.g. still uploading)
       const fakeInterval = setInterval(() => {
         setCurrentStage((prev) => {
-          if (prev < 3) return prev + 1; // Stay at 'Speech to Text' until real jobId arrives
+          if (prev < 1) return prev + 1; // Stay at 'Extract Audio' until real jobId arrives
           return prev;
         });
-      }, 1500);
+      }, 3000);
       return () => clearInterval(fakeInterval);
     }
 
     return () => clearInterval(pollInterval);
   }, [jobId, onComplete]);
 
-  const percentage =
-    Math.round((currentStage / (STAGES.length - 1)) * 100) || 0;
+  const percentage = backendProgress || 0;
 
   return (
     <div className="proc-wrap" style={{ display: "block" }}>
@@ -136,6 +157,16 @@ export default function PipelineTracker({ file, jobId, onComplete, onCancel }) {
             />
           </svg>
           <div className="proc-circle-center">{percentage}%</div>
+        </div>
+
+        <div
+          style={{
+            fontSize: "0.75rem",
+            color: "var(--text-muted)",
+            marginBottom: "1rem",
+          }}
+        >
+          Estimated time remaining: ~{timeRemaining}s
         </div>
 
         <div className="proc-pipeline">

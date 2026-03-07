@@ -1,6 +1,7 @@
 import uuid
 import json
 import time
+import threading
 from typing import Dict, Optional
 from configs.config import settings
 from backend.utils.logger import logger
@@ -12,6 +13,7 @@ class JobManager:
     _jobs: Dict[str, dict] = {}
     # file_hash -> job_id (Duplicate prevention)
     _hashes: Dict[str, str] = {}
+    _lock = threading.Lock()
 
     def __init__(self):
         self._load_jobs()
@@ -53,6 +55,7 @@ class JobManager:
         self._jobs[job_id] = {
             "job_id": job_id,
             "status": "uploaded",
+            "progress": 10,
             "created_at": time.time(),
             "file_hash": file_hash,
             "error": None
@@ -67,13 +70,16 @@ class JobManager:
         logger.info(f"Created new job: {job_id}")
         return job_id
 
-    def update_status(self, job_id: str, status: str, error: Optional[str] = None):
-        if job_id in self._jobs:
-            self._jobs[job_id]["status"] = status
-            if error:
-                self._jobs[job_id]["error"] = error
-            self._save_job(job_id)
-            logger.info(f"Job {job_id} status updated to: {status}")
+    def update_status(self, job_id: str, status: str, progress: Optional[int] = None, error: Optional[str] = None):
+        with self._lock:
+            if job_id in self._jobs:
+                self._jobs[job_id]["status"] = status
+                if progress is not None:
+                    self._jobs[job_id]["progress"] = progress
+                if error:
+                    self._jobs[job_id]["error"] = error
+                self._save_job(job_id)
+                logger.info(f"Job {job_id} status updated to: {status} ({progress if progress else ''}%)")
 
     def get_status(self, job_id: str) -> str:
         # Check disk if not in memory (lazy load fallback)

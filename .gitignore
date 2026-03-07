@@ -1,1 +1,36 @@
-node_modules
+# Version Control
+.git
+.gitignore
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+env/
+.env
+
+# Storage (Critical for privacy/demo)
+backend/storage/temp/*
+backend/storage/jobs/*
+backend/storage/results/*
+!backend/storage/demo_results.json
+
+# Logs
+logs/
+*.log
+
+# Node.js
+node_modules/
+dist/
+build/
+.next/
+.DS_Store
+
+# AI Models (Optional to ignore if they are huge, but common to include if small)
+# *.pt
+# *.weights
+
+# OS
+Thumbs.db
+Desktop.ini

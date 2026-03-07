@@ -71,14 +71,12 @@ function UploadApp() {
 
   const loadSampleDemo = async () => {
     try {
-      const response = await fetch(
-        "http://localhost:8000/static/test_video.mp4",
-      );
-      const blob = await response.blob();
-      const sampleFile = new File([blob], "Stanford_CS224N_Lecture.mp4", {
-        type: "video/mp4",
+      import("../services/apiClient").then(async ({ tryDemo }) => {
+        const res = await tryDemo();
+        if (res) {
+          window.location.href = `/result.html?job_id=demo`;
+        }
       });
-      startAnalysis(sampleFile, "Sample Topic");
     } catch (err) {
       console.error(err);
       alert("Could not load sample demo from backend.");

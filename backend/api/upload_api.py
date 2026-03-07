@@ -10,34 +10,38 @@ from backend.ai_engine.pipelines.video_pipeline import VideoPipeline
 
 router = APIRouter()
 
-@router.post("/demo-analysis")
-async def demo_analysis(background_tasks: BackgroundTasks):
-    """Phase 18: Instant demo mode using test_video.mp4"""
-    demo_video = Path("scripts/test_video.mp4") # Placeholder for demo video location
-    if not demo_video.exists():
-        # Fallback search in storage
-        demo_video = settings.BASE_DIR / "scripts" / "test_video.mp4"
-        if not demo_video.exists():
-            raise HTTPException(status_code=404, detail="Demo video not found.")
-    
-    file_hash = "demo_hash_v1"
-    job_id = job_manager.create_job(file_hash)
-    job_data = job_manager.get_job_data(job_id)
-    
-    if job_data["status"] == "uploaded":
-        job_dir = settings.TEMP_DIR / job_id
-        final_video_path = job_dir / "demo_video.mp4"
-        shutil.copy(str(demo_video), str(final_video_path))
-        
-        background_tasks.add_task(
-            VideoPipeline.process_job, 
-            job_id, 
-            str(final_video_path), 
-            "This is a demo analysis of a computer science lecture."
-        )
-        return {"job_id": job_id, "status": "processing", "message": "Demo started."}
-    
-    return {"job_id": job_id, "status": job_data["status"]}
+@router.post("/try-demo")
+async def try_demo():
+    """Phase 8: Add fast demo mode. Loads preprocessed results instantly."""
+    demo_results_path = settings.BASE_DIR / "backend" / "storage" / "demo_results.json"
+    if not demo_results_path.exists():
+        # Create a basic sample demo results file if it doesn't exist
+        sample_results = {
+            "transcript": "In this lecture, we explore the foundations of computer science and algorithmic complexity.",
+            "speakers": [{"speaker": "Professor", "start": 0, "end": 10}],
+            "visual_context": [
+                {
+                    "timestamp": "00:00",
+                    "objects": ["whiteboard", "presenter"],
+                    "actions": ["explaining"],
+                    "ocr_text": ["Algorithmic Complexity", "Big O notation"],
+                    "caption": "A lecturer stands in front of a whiteboard explaining Big O notation."
+                }
+            ],
+            "semantic_script": {
+                "timeline": [
+                    {"timestamp": "00:02", "event": "Topic introduction"},
+                    {"timestamp": "00:15", "event": "Big O diagram appears"}
+                ]
+            },
+            "similarity_score": 0.92
+        }
+        demo_results_path.parent.mkdir(parents=True, exist_ok=True)
+        with open(demo_results_path, "w") as f:
+            json.dump(sample_results, f, indent=4)
+            
+    with open(demo_results_path, "r") as f:
+        return json.load(f)
 
 @router.post("/upload-video")
 

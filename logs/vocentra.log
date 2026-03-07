@@ -10,3 +10,653 @@
 2026-03-06 16:22:44,923 - vocentra - INFO - Initializing OCR Model (Mock)...
 2026-03-06 16:22:44,924 - vocentra - INFO - Initializing Action Detection Model (Mock)...
 2026-03-06 16:22:44,924 - vocentra - INFO - All AI models initialized successfully.
+2026-03-06 16:38:26,052 - vocentra - INFO - Created new job: job_d4689c84
+2026-03-06 16:38:26,066 - vocentra - INFO - Job job_d4689c84 status updated to: processing
+2026-03-06 16:38:26,067 - vocentra - INFO - [job_d4689c84] Step 1: Extracting audio and frames...
+2026-03-06 16:38:27,571 - vocentra - ERROR - FFmpeg audio extraction failed: ffmpeg version 2025-03-31-git-35c091f4b7-full_build-www.gyan.dev Copyright (c) 2000-2025 the FFmpeg developers
+  built with gcc 14.2.0 (Rev1, Built by MSYS2 project)
+  configuration: --enable-gpl --enable-version3 --enable-static --disable-w32threads --disable-autodetect --enable-fontconfig --enable-iconv --enable-gnutls --enable-lcms2 --enable-libxml2 --enable-gmp --enable-bzlib --enable-lzma --enable-libsnappy --enable-zlib --enable-librist --enable-libsrt --enable-libssh --enable-libzmq --enable-avisynth --enable-libbluray --enable-libcaca --enable-libdvdnav --enable-libdvdread --enable-sdl2 --enable-libaribb24 --enable-libaribcaption --enable-libdav1d --enable-libdavs2 --enable-libopenjpeg --enable-libquirc --enable-libuavs3d --enable-libxevd --enable-libzvbi --enable-libqrencode --enable-librav1e --enable-libsvtav1 --enable-libvvenc --enable-libwebp --enable-libx264 --enable-libx265 --enable-libxavs2 --enable-libxeve --enable-libxvid --enable-libaom --enable-libjxl --enable-libvpx --enable-mediafoundation --enable-libass --enable-frei0r --enable-libfreetype --enable-libfribidi --enable-libharfbuzz --enable-liblensfun --enable-libvidstab --enable-libvmaf --enable-libzimg --enable-amf --enable-cuda-llvm --enable-cuvid --enable-dxva2 --enable-d3d11va --enable-d3d12va --enable-ffnvcodec --enable-libvpl --enable-nvdec --enable-nvenc --enable-vaapi --enable-libshaderc --enable-vulkan --enable-libplacebo --enable-opencl --enable-libcdio --enable-libgme --enable-libmodplug --enable-libopenmpt --enable-libopencore-amrwb --enable-libmp3lame --enable-libshine --enable-libtheora --enable-libtwolame --enable-libvo-amrwbenc --enable-libcodec2 --enable-libilbc --enable-libgsm --enable-liblc3 --enable-libopencore-amrnb --enable-libopus --enable-libspeex --enable-libvorbis --enable-ladspa --enable-libbs2b --enable-libflite --enable-libmysofa --enable-librubberband --enable-libsoxr --enable-chromaprint
+  libavutil      60.  0.100 / 60.  0.100
+  libavcodec     62.  0.100 / 62.  0.100
+  libavformat    62.  0.100 / 62.  0.100
+  libavdevice    62.  0.100 / 62.  0.100
+  libavfilter    11.  0.100 / 11.  0.100
+  libswscale      9.  0.100 /  9.  0.100
+  libswresample   6.  0.100 /  6.  0.100
+  libpostproc    59.  0.100 / 59.  0.100
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0000028d46a9d300] Format mov,mp4,m4a,3gp,3g2,mj2 detected only with low score of 1, misdetection possible!
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0000028d46a9d300] moov atom not found
+[in#0 @ 0000028d46a7e600] Error opening input: Invalid data found when processing input
+Error opening input file D:\Hacksmiths United\Vocentra\backend\storage\temp\job_d4689c84\Stanford_CS224N_Lecture.mp4.
+Error opening input files: Invalid data found when processing input
+
+2026-03-06 16:38:27,572 - vocentra - ERROR - [job_d4689c84] Pipeline failed: Audio extraction failed.
+2026-03-06 16:38:27,573 - vocentra - INFO - Job job_d4689c84 status updated to: failed
+2026-03-06 16:45:48,634 - vocentra - INFO - Starting Vocentra Reorganized Backend...
+2026-03-06 16:45:58,557 - vocentra - INFO - Initializing AI models for the first time...
+2026-03-06 16:45:58,558 - vocentra - INFO - Loading Whisper model: base
+2026-03-06 16:45:59,262 - vocentra - INFO - Loading BLIP model: Salesforce/blip-image-captioning-base
+2026-03-06 16:46:42,502 - vocentra - INFO - Loading CLIP model: openai/clip-vit-base-patch32
+2026-03-06 16:47:15,562 - vocentra - INFO - Loading SentenceTransformer model...
+2026-03-06 16:48:08,625 - vocentra - INFO - Initializing Object Detection Model (Mock)...
+2026-03-06 16:48:08,635 - vocentra - INFO - Initializing OCR Model (Mock)...
+2026-03-06 16:48:08,636 - vocentra - INFO - Initializing Action Detection Model (Mock)...
+2026-03-06 16:48:08,638 - vocentra - INFO - All AI models initialized successfully.
+2026-03-06 16:57:37,147 - vocentra - INFO - Duplicate file detected. Returning existing job_id: job_d4689c84
+2026-03-06 16:57:37,151 - vocentra - INFO - Job job_d4689c84 status updated to: processing
+2026-03-06 16:57:37,152 - vocentra - INFO - [job_d4689c84] Step 1: Extracting audio and frames...
+2026-03-06 16:57:37,291 - vocentra - ERROR - FFmpeg audio extraction failed: ffmpeg version 2025-03-31-git-35c091f4b7-full_build-www.gyan.dev Copyright (c) 2000-2025 the FFmpeg developers
+  built with gcc 14.2.0 (Rev1, Built by MSYS2 project)
+  configuration: --enable-gpl --enable-version3 --enable-static --disable-w32threads --disable-autodetect --enable-fontconfig --enable-iconv --enable-gnutls --enable-lcms2 --enable-libxml2 --enable-gmp --enable-bzlib --enable-lzma --enable-libsnappy --enable-zlib --enable-librist --enable-libsrt --enable-libssh --enable-libzmq --enable-avisynth --enable-libbluray --enable-libcaca --enable-libdvdnav --enable-libdvdread --enable-sdl2 --enable-libaribb24 --enable-libaribcaption --enable-libdav1d --enable-libdavs2 --enable-libopenjpeg --enable-libquirc --enable-libuavs3d --enable-libxevd --enable-libzvbi --enable-libqrencode --enable-librav1e --enable-libsvtav1 --enable-libvvenc --enable-libwebp --enable-libx264 --enable-libx265 --enable-libxavs2 --enable-libxeve --enable-libxvid --enable-libaom --enable-libjxl --enable-libvpx --enable-mediafoundation --enable-libass --enable-frei0r --enable-libfreetype --enable-libfribidi --enable-libharfbuzz --enable-liblensfun --enable-libvidstab --enable-libvmaf --enable-libzimg --enable-amf --enable-cuda-llvm --enable-cuvid --enable-dxva2 --enable-d3d11va --enable-d3d12va --enable-ffnvcodec --enable-libvpl --enable-nvdec --enable-nvenc --enable-vaapi --enable-libshaderc --enable-vulkan --enable-libplacebo --enable-opencl --enable-libcdio --enable-libgme --enable-libmodplug --enable-libopenmpt --enable-libopencore-amrwb --enable-libmp3lame --enable-libshine --enable-libtheora --enable-libtwolame --enable-libvo-amrwbenc --enable-libcodec2 --enable-libilbc --enable-libgsm --enable-liblc3 --enable-libopencore-amrnb --enable-libopus --enable-libspeex --enable-libvorbis --enable-ladspa --enable-libbs2b --enable-libflite --enable-libmysofa --enable-librubberband --enable-libsoxr --enable-chromaprint
+  libavutil      60.  0.100 / 60.  0.100
+  libavcodec     62.  0.100 / 62.  0.100
+  libavformat    62.  0.100 / 62.  0.100
+  libavdevice    62.  0.100 / 62.  0.100
+  libavfilter    11.  0.100 / 11.  0.100
+  libswscale      9.  0.100 /  9.  0.100
+  libswresample   6.  0.100 /  6.  0.100
+  libpostproc    59.  0.100 / 59.  0.100
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0000020e2407d300] Format mov,mp4,m4a,3gp,3g2,mj2 detected only with low score of 1, misdetection possible!
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0000020e2407d300] moov atom not found
+[in#0 @ 0000020e2405e600] Error opening input: Invalid data found when processing input
+Error opening input file D:\Hacksmiths United\Vocentra\backend\storage\temp\job_d4689c84\Stanford_CS224N_Lecture.mp4.
+Error opening input files: Invalid data found when processing input
+
+2026-03-06 16:57:37,292 - vocentra - ERROR - [job_d4689c84] Pipeline failed: Audio extraction failed: ffmpeg version 2025-03-31-git-35c091f4b7-full_build-www.gyan.dev Copyright (c) 2000-2025 the FFmpeg developers
+  built with gcc 14.2.0 (Rev1, Built by MSYS2 project)
+  configuration: --enable-gpl --enable-version3 --enable-static --disable-w32threads --disable-autodetect --enable-fontconfig --enable-iconv --enable-gnutls --enable-lcms2 --enable-libxml2 --enable-gmp --enable-bzlib --enable-lzma --enable-libsnappy --enable-zlib --enable-librist --enable-libsrt --enable-libssh --enable-libzmq --enable-avisynth --enable-libbluray --enable-libcaca --enable-libdvdnav --enable-libdvdread --enable-sdl2 --enable-libaribb24 --enable-libaribcaption --enable-libdav1d --enable-libdavs2 --enable-libopenjpeg --enable-libquirc --enable-libuavs3d --enable-libxevd --enable-libzvbi --enable-libqrencode --enable-librav1e --enable-libsvtav1 --enable-libvvenc --enable-libwebp --enable-libx264 --enable-libx265 --enable-libxavs2 --enable-libxeve --enable-libxvid --enable-libaom --enable-libjxl --enable-libvpx --enable-mediafoundation --enable-libass --enable-frei0r --enable-libfreetype --enable-libfribidi --enable-libharfbuzz --enable-liblensfun --enable-libvidstab --enable-libvmaf --enable-libzimg --enable-amf --enable-cuda-llvm --enable-cuvid --enable-dxva2 --enable-d3d11va --enable-d3d12va --enable-ffnvcodec --enable-libvpl --enable-nvdec --enable-nvenc --enable-vaapi --enable-libshaderc --enable-vulkan --enable-libplacebo --enable-opencl --enable-libcdio --enable-libgme --enable-libmodplug --enable-libopenmpt --enable-libopencore-amrwb --enable-libmp3lame --enable-libshine --enable-libtheora --enable-libtwolame --enable-libvo-amrwbenc --enable-libcodec2 --enable-libilbc --enable-libgsm --enable-liblc3 --enable-libopencore-amrnb --enable-libopus --enable-libspeex --enable-libvorbis --enable-ladspa --enable-libbs2b --enable-libflite --enable-libmysofa --enable-librubberband --enable-libsoxr --enable-chromaprint
+  libavutil      60.  0.100 / 60.  0.100
+  libavcodec     62.  0.100 / 62.  0.100
+  libavformat    62.  0.100 / 62.  0.100
+  libavdevice    62.  0.100 / 62.  0.100
+  libavfilter    11.  0.100 / 11.  0.100
+  libswscale      9.  0.100 /  9.  0.100
+  libswresample   6.  0.100 /  6.  0.100
+  libpostproc    59.  0.100 / 59.  0.100
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0000020e2407d300] Format mov,mp4,m4a,3gp,3g2,mj2 detected only with low score of 1, misdetection possible!
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0000020e2407d300] moov atom not found
+[in#0 @ 0000020e2405e600] Error opening input: Invalid data found when processing input
+Error opening input file D:\Hacksmiths United\Vocentra\backend\storage\temp\job_d4689c84\Stanford_CS224N_Lecture.mp4.
+Error opening input files: Invalid data found when processing input
+
+2026-03-06 16:57:37,294 - vocentra - INFO - Job job_d4689c84 status updated to: failed
+2026-03-06 17:05:27,296 - vocentra - INFO - Duplicate file detected. Returning existing job_id: job_d4689c84
+2026-03-06 17:05:27,302 - vocentra - INFO - Job job_d4689c84 status updated to: processing
+2026-03-06 17:05:27,303 - vocentra - INFO - [job_d4689c84] Step 1: Extracting audio and frames...
+2026-03-06 17:05:27,377 - vocentra - ERROR - FFmpeg audio extraction failed: ffmpeg version 2025-03-31-git-35c091f4b7-full_build-www.gyan.dev Copyright (c) 2000-2025 the FFmpeg developers
+  built with gcc 14.2.0 (Rev1, Built by MSYS2 project)
+  configuration: --enable-gpl --enable-version3 --enable-static --disable-w32threads --disable-autodetect --enable-fontconfig --enable-iconv --enable-gnutls --enable-lcms2 --enable-libxml2 --enable-gmp --enable-bzlib --enable-lzma --enable-libsnappy --enable-zlib --enable-librist --enable-libsrt --enable-libssh --enable-libzmq --enable-avisynth --enable-libbluray --enable-libcaca --enable-libdvdnav --enable-libdvdread --enable-sdl2 --enable-libaribb24 --enable-libaribcaption --enable-libdav1d --enable-libdavs2 --enable-libopenjpeg --enable-libquirc --enable-libuavs3d --enable-libxevd --enable-libzvbi --enable-libqrencode --enable-librav1e --enable-libsvtav1 --enable-libvvenc --enable-libwebp --enable-libx264 --enable-libx265 --enable-libxavs2 --enable-libxeve --enable-libxvid --enable-libaom --enable-libjxl --enable-libvpx --enable-mediafoundation --enable-libass --enable-frei0r --enable-libfreetype --enable-libfribidi --enable-libharfbuzz --enable-liblensfun --enable-libvidstab --enable-libvmaf --enable-libzimg --enable-amf --enable-cuda-llvm --enable-cuvid --enable-dxva2 --enable-d3d11va --enable-d3d12va --enable-ffnvcodec --enable-libvpl --enable-nvdec --enable-nvenc --enable-vaapi --enable-libshaderc --enable-vulkan --enable-libplacebo --enable-opencl --enable-libcdio --enable-libgme --enable-libmodplug --enable-libopenmpt --enable-libopencore-amrwb --enable-libmp3lame --enable-libshine --enable-libtheora --enable-libtwolame --enable-libvo-amrwbenc --enable-libcodec2 --enable-libilbc --enable-libgsm --enable-liblc3 --enable-libopencore-amrnb --enable-libopus --enable-libspeex --enable-libvorbis --enable-ladspa --enable-libbs2b --enable-libflite --enable-libmysofa --enable-librubberband --enable-libsoxr --enable-chromaprint
+  libavutil      60.  0.100 / 60.  0.100
+  libavcodec     62.  0.100 / 62.  0.100
+  libavformat    62.  0.100 / 62.  0.100
+  libavdevice    62.  0.100 / 62.  0.100
+  libavfilter    11.  0.100 / 11.  0.100
+  libswscale      9.  0.100 /  9.  0.100
+  libswresample   6.  0.100 /  6.  0.100
+  libpostproc    59.  0.100 / 59.  0.100
+[mov,mp4,m4a,3gp,3g2,mj2 @ 000001b6243fd300] Format mov,mp4,m4a,3gp,3g2,mj2 detected only with low score of 1, misdetection possible!
+[mov,mp4,m4a,3gp,3g2,mj2 @ 000001b6243fd300] moov atom not found
+[in#0 @ 000001b6243de600] Error opening input: Invalid data found when processing input
+Error opening input file D:\Hacksmiths United\Vocentra\backend\storage\temp\job_d4689c84\Stanford_CS224N_Lecture.mp4.
+Error opening input files: Invalid data found when processing input
+
+2026-03-06 17:05:27,378 - vocentra - ERROR - [job_d4689c84] Pipeline failed: Audio extraction failed: ffmpeg version 2025-03-31-git-35c091f4b7-full_build-www.gyan.dev Copyright (c) 2000-2025 the FFmpeg developers
+  built with gcc 14.2.0 (Rev1, Built by MSYS2 project)
+  configuration: --enable-gpl --enable-version3 --enable-static --disable-w32threads --disable-autodetect --enable-fontconfig --enable-iconv --enable-gnutls --enable-lcms2 --enable-libxml2 --enable-gmp --enable-bzlib --enable-lzma --enable-libsnappy --enable-zlib --enable-librist --enable-libsrt --enable-libssh --enable-libzmq --enable-avisynth --enable-libbluray --enable-libcaca --enable-libdvdnav --enable-libdvdread --enable-sdl2 --enable-libaribb24 --enable-libaribcaption --enable-libdav1d --enable-libdavs2 --enable-libopenjpeg --enable-libquirc --enable-libuavs3d --enable-libxevd --enable-libzvbi --enable-libqrencode --enable-librav1e --enable-libsvtav1 --enable-libvvenc --enable-libwebp --enable-libx264 --enable-libx265 --enable-libxavs2 --enable-libxeve --enable-libxvid --enable-libaom --enable-libjxl --enable-libvpx --enable-mediafoundation --enable-libass --enable-frei0r --enable-libfreetype --enable-libfribidi --enable-libharfbuzz --enable-liblensfun --enable-libvidstab --enable-libvmaf --enable-libzimg --enable-amf --enable-cuda-llvm --enable-cuvid --enable-dxva2 --enable-d3d11va --enable-d3d12va --enable-ffnvcodec --enable-libvpl --enable-nvdec --enable-nvenc --enable-vaapi --enable-libshaderc --enable-vulkan --enable-libplacebo --enable-opencl --enable-libcdio --enable-libgme --enable-libmodplug --enable-libopenmpt --enable-libopencore-amrwb --enable-libmp3lame --enable-libshine --enable-libtheora --enable-libtwolame --enable-libvo-amrwbenc --enable-libcodec2 --enable-libilbc --enable-libgsm --enable-liblc3 --enable-libopencore-amrnb --enable-libopus --enable-libspeex --enable-libvorbis --enable-ladspa --enable-libbs2b --enable-libflite --enable-libmysofa --enable-librubberband --enable-libsoxr --enable-chromaprint
+  libavutil      60.  0.100 / 60.  0.100
+  libavcodec     62.  0.100 / 62.  0.100
+  libavformat    62.  0.100 / 62.  0.100
+  libavdevice    62.  0.100 / 62.  0.100
+  libavfilter    11.  0.100 / 11.  0.100
+  libswscale      9.  0.100 /  9.  0.100
+  libswresample   6.  0.100 /  6.  0.100
+  libpostproc    59.  0.100 / 59.  0.100
+[mov,mp4,m4a,3gp,3g2,mj2 @ 000001b6243fd300] Format mov,mp4,m4a,3gp,3g2,mj2 detected only with low score of 1, misdetection possible!
+[mov,mp4,m4a,3gp,3g2,mj2 @ 000001b6243fd300] moov atom not found
+[in#0 @ 000001b6243de600] Error opening input: Invalid data found when processing input
+Error opening input file D:\Hacksmiths United\Vocentra\backend\storage\temp\job_d4689c84\Stanford_CS224N_Lecture.mp4.
+Error opening input files: Invalid data found when processing input
+
+2026-03-06 17:05:27,380 - vocentra - INFO - Job job_d4689c84 status updated to: failed
+2026-03-06 17:10:52,474 - vocentra - INFO - Starting Vocentra Reorganized Backend...
+2026-03-06 17:11:00,867 - vocentra - INFO - Initializing AI models for the first time...
+2026-03-06 17:11:00,868 - vocentra - INFO - Loading Whisper model: base
+2026-03-06 17:11:01,382 - vocentra - INFO - Loading BLIP model: Salesforce/blip-image-captioning-base
+2026-03-06 17:11:07,933 - vocentra - INFO - Loading CLIP model: openai/clip-vit-base-patch32
+2026-03-06 17:11:13,221 - vocentra - INFO - Loading SentenceTransformer model...
+2026-03-06 17:11:20,840 - vocentra - INFO - Initializing Object Detection Model (Mock)...
+2026-03-06 17:11:20,840 - vocentra - INFO - Initializing OCR Model (Mock)...
+2026-03-06 17:11:20,841 - vocentra - INFO - Initializing Action Detection Model (Mock)...
+2026-03-06 17:11:20,841 - vocentra - INFO - All AI models initialized successfully.
+2026-03-06 17:14:23,901 - vocentra - INFO - Created new job: job_9ab018de
+2026-03-06 17:14:23,924 - vocentra - INFO - Job job_9ab018de status updated to: processing
+2026-03-06 17:14:23,925 - vocentra - INFO - [job_9ab018de] Step 1: Extracting audio and frames...
+2026-03-06 17:14:24,790 - vocentra - INFO - Audio extracted to D:\Hacksmiths United\Vocentra\backend\storage\temp\job_9ab018de\audio.wav
+2026-03-06 17:16:32,523 - vocentra - INFO - Starting Vocentra Reorganized Backend...
+2026-03-06 17:16:40,421 - vocentra - INFO - Initializing AI models for the first time...
+2026-03-06 17:16:40,422 - vocentra - INFO - Loading Whisper model: base
+2026-03-06 17:16:40,939 - vocentra - INFO - Loading BLIP model: Salesforce/blip-image-captioning-base
+2026-03-06 17:16:47,960 - vocentra - INFO - Loading CLIP model: openai/clip-vit-base-patch32
+2026-03-06 17:16:52,637 - vocentra - INFO - Loading SentenceTransformer model...
+2026-03-06 17:17:00,805 - vocentra - INFO - Initializing Object Detection Model (Mock)...
+2026-03-06 17:17:00,805 - vocentra - INFO - Initializing OCR Model (Mock)...
+2026-03-06 17:17:00,805 - vocentra - INFO - Initializing Action Detection Model (Mock)...
+2026-03-06 17:17:00,805 - vocentra - INFO - All AI models initialized successfully.
+2026-03-06 17:17:50,253 - vocentra - INFO - Starting Vocentra Reorganized Backend...
+2026-03-06 17:17:58,343 - vocentra - INFO - Initializing AI models for the first time...
+2026-03-06 17:17:58,343 - vocentra - INFO - Loading Whisper model: base
+2026-03-06 17:17:58,869 - vocentra - INFO - Loading BLIP model: Salesforce/blip-image-captioning-base
+2026-03-06 17:18:05,704 - vocentra - INFO - Loading CLIP model: openai/clip-vit-base-patch32
+2026-03-06 17:18:10,497 - vocentra - INFO - Loading SentenceTransformer model...
+2026-03-06 17:18:20,702 - vocentra - INFO - Initializing Object Detection Model (Mock)...
+2026-03-06 17:18:20,703 - vocentra - INFO - Initializing OCR Model (Mock)...
+2026-03-06 17:18:20,703 - vocentra - INFO - Initializing Action Detection Model (Mock)...
+2026-03-06 17:18:20,703 - vocentra - INFO - All AI models initialized successfully.
+2026-03-06 17:21:23,633 - vocentra - INFO - Duplicate file detected. Returning existing job_id: job_9ab018de
+2026-03-06 17:25:25,833 - vocentra - INFO - Duplicate file detected. Returning existing job_id: job_9ab018de
+2026-03-07 14:20:06,375 - vocentra - INFO - Starting Vocentra Reorganized Backend...
+2026-03-07 14:22:37,714 - vocentra - INFO - Initializing AI models for the first time...
+2026-03-07 14:22:37,715 - vocentra - INFO - Loading Whisper model: base
+2026-03-07 14:22:39,592 - vocentra - INFO - Loading BLIP model: Salesforce/blip-image-captioning-base
+2026-03-07 14:22:43,111 - vocentra - INFO - Loading CLIP model: openai/clip-vit-base-patch32
+2026-03-07 14:22:47,054 - vocentra - INFO - Loading SentenceTransformer model...
+2026-03-07 14:22:52,679 - vocentra - INFO - Initializing YOLOv8 Object Detection Model...
+2026-03-07 14:22:55,471 - vocentra - INFO - Initializing EasyOCR Model...
+2026-03-07 14:23:14,690 - vocentra - INFO - Initializing Action Detection Model (Standardized)...
+2026-03-07 14:23:14,690 - vocentra - INFO - All AI models initialized successfully.
+2026-03-07 14:33:39,258 - vocentra - INFO - Starting Vocentra Reorganized Backend...
+2026-03-07 14:33:59,764 - vocentra - INFO - Initializing AI models for the first time...
+2026-03-07 14:33:59,765 - vocentra - INFO - Loading Whisper model: base
+2026-03-07 14:34:00,518 - vocentra - INFO - Loading BLIP model: Salesforce/blip-image-captioning-base
+2026-03-07 14:34:03,124 - vocentra - INFO - Loading CLIP model: openai/clip-vit-base-patch32
+2026-03-07 14:34:05,364 - vocentra - INFO - Loading SentenceTransformer model...
+2026-03-07 14:34:08,824 - vocentra - INFO - Initializing YOLOv8 Object Detection Model...
+2026-03-07 14:34:08,874 - vocentra - INFO - Initializing EasyOCR Model...
+2026-03-07 14:34:10,295 - vocentra - INFO - Initializing Action Detection Model (Standardized)...
+2026-03-07 14:34:10,296 - vocentra - INFO - All AI models initialized successfully.
+2026-03-07 14:35:33,408 - vocentra - ERROR - Global error: name 'json' is not defined
+Traceback (most recent call last):
+  File "C:\Users\vraje\AppData\Roaming\Python\Python313\site-packages\starlette\middleware\errors.py", line 162, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\vraje\AppData\Roaming\Python\Python313\site-packages\starlette\middleware\cors.py", line 91, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "C:\Users\vraje\AppData\Roaming\Python\Python313\site-packages\starlette\middleware\cors.py", line 146, in simple_response
+    await self.app(scope, receive, send)
+  File "C:\Users\vraje\AppData\Roaming\Python\Python313\site-packages\starlette\middleware\exceptions.py", line 79, in __call__
+    raise exc
+  File "C:\Users\vraje\AppData\Roaming\Python\Python313\site-packages\starlette\middleware\exceptions.py", line 68, in __call__
+    await self.app(scope, receive, sender)
+  File "C:\Users\vraje\AppData\Roaming\Python\Python313\site-packages\fastapi\middleware\asyncexitstack.py", line 20, in __call__
+    raise e
+  File "C:\Users\vraje\AppData\Roaming\Python\Python313\site-packages\fastapi\middleware\asyncexitstack.py", line 17, in __call__
+    await self.app(scope, receive, send)
+  File "C:\Users\vraje\AppData\Roaming\Python\Python313\site-packages\starlette\routing.py", line 718, in __call__
+    await route.handle(scope, receive, send)
+  File "C:\Users\vraje\AppData\Roaming\Python\Python313\site-packages\starlette\routing.py", line 276, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\vraje\AppData\Roaming\Python\Python313\site-packages\starlette\routing.py", line 66, in app
+    response = await func(request)
+               ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vraje\AppData\Roaming\Python\Python313\site-packages\fastapi\routing.py", line 274, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        dependant=dependant, values=values, is_coroutine=is_coroutine
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\vraje\AppData\Roaming\Python\Python313\site-packages\fastapi\routing.py", line 191, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Hacksmiths United\Vocentra\backend\api\upload_api.py", line 41, in try_demo
+    json.dump(sample_results, f, indent=4)
+    ^^^^
+NameError: name 'json' is not defined. Did you forget to import 'json'?
+2026-03-07 14:35:36,609 - vocentra - ERROR - Global error: name 'json' is not defined
+Traceback (most recent call last):
+  File "C:\Users\vraje\AppData\Roaming\Python\Python313\site-packages\starlette\middleware\errors.py", line 162, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\vraje\AppData\Roaming\Python\Python313\site-packages\starlette\middleware\cors.py", line 91, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "C:\Users\vraje\AppData\Roaming\Python\Python313\site-packages\starlette\middleware\cors.py", line 146, in simple_response
+    await self.app(scope, receive, send)
+  File "C:\Users\vraje\AppData\Roaming\Python\Python313\site-packages\starlette\middleware\exceptions.py", line 79, in __call__
+    raise exc
+  File "C:\Users\vraje\AppData\Roaming\Python\Python313\site-packages\starlette\middleware\exceptions.py", line 68, in __call__
+    await self.app(scope, receive, sender)
+  File "C:\Users\vraje\AppData\Roaming\Python\Python313\site-packages\fastapi\middleware\asyncexitstack.py", line 20, in __call__
+    raise e
+  File "C:\Users\vraje\AppData\Roaming\Python\Python313\site-packages\fastapi\middleware\asyncexitstack.py", line 17, in __call__
+    await self.app(scope, receive, send)
+  File "C:\Users\vraje\AppData\Roaming\Python\Python313\site-packages\starlette\routing.py", line 718, in __call__
+    await route.handle(scope, receive, send)
+  File "C:\Users\vraje\AppData\Roaming\Python\Python313\site-packages\starlette\routing.py", line 276, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\vraje\AppData\Roaming\Python\Python313\site-packages\starlette\routing.py", line 66, in app
+    response = await func(request)
+               ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vraje\AppData\Roaming\Python\Python313\site-packages\fastapi\routing.py", line 274, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        dependant=dependant, values=values, is_coroutine=is_coroutine
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\vraje\AppData\Roaming\Python\Python313\site-packages\fastapi\routing.py", line 191, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Hacksmiths United\Vocentra\backend\api\upload_api.py", line 44, in try_demo
+    return json.load(f)
+           ^^^^
+NameError: name 'json' is not defined. Did you forget to import 'json'?
+2026-03-07 14:35:37,470 - vocentra - ERROR - Global error: name 'json' is not defined
+Traceback (most recent call last):
+  File "C:\Users\vraje\AppData\Roaming\Python\Python313\site-packages\starlette\middleware\errors.py", line 162, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\vraje\AppData\Roaming\Python\Python313\site-packages\starlette\middleware\cors.py", line 91, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "C:\Users\vraje\AppData\Roaming\Python\Python313\site-packages\starlette\middleware\cors.py", line 146, in simple_response
+    await self.app(scope, receive, send)
+  File "C:\Users\vraje\AppData\Roaming\Python\Python313\site-packages\starlette\middleware\exceptions.py", line 79, in __call__
+    raise exc
+  File "C:\Users\vraje\AppData\Roaming\Python\Python313\site-packages\starlette\middleware\exceptions.py", line 68, in __call__
+    await self.app(scope, receive, sender)
+  File "C:\Users\vraje\AppData\Roaming\Python\Python313\site-packages\fastapi\middleware\asyncexitstack.py", line 20, in __call__
+    raise e
+  File "C:\Users\vraje\AppData\Roaming\Python\Python313\site-packages\fastapi\middleware\asyncexitstack.py", line 17, in __call__
+    await self.app(scope, receive, send)
+  File "C:\Users\vraje\AppData\Roaming\Python\Python313\site-packages\starlette\routing.py", line 718, in __call__
+    await route.handle(scope, receive, send)
+  File "C:\Users\vraje\AppData\Roaming\Python\Python313\site-packages\starlette\routing.py", line 276, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\vraje\AppData\Roaming\Python\Python313\site-packages\starlette\routing.py", line 66, in app
+    response = await func(request)
+               ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vraje\AppData\Roaming\Python\Python313\site-packages\fastapi\routing.py", line 274, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        dependant=dependant, values=values, is_coroutine=is_coroutine
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\vraje\AppData\Roaming\Python\Python313\site-packages\fastapi\routing.py", line 191, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Hacksmiths United\Vocentra\backend\api\upload_api.py", line 44, in try_demo
+    return json.load(f)
+           ^^^^
+NameError: name 'json' is not defined. Did you forget to import 'json'?
+2026-03-07 14:35:37,641 - vocentra - ERROR - Global error: name 'json' is not defined
+Traceback (most recent call last):
+  File "C:\Users\vraje\AppData\Roaming\Python\Python313\site-packages\starlette\middleware\errors.py", line 162, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\vraje\AppData\Roaming\Python\Python313\site-packages\starlette\middleware\cors.py", line 91, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "C:\Users\vraje\AppData\Roaming\Python\Python313\site-packages\starlette\middleware\cors.py", line 146, in simple_response
+    await self.app(scope, receive, send)
+  File "C:\Users\vraje\AppData\Roaming\Python\Python313\site-packages\starlette\middleware\exceptions.py", line 79, in __call__
+    raise exc
+  File "C:\Users\vraje\AppData\Roaming\Python\Python313\site-packages\starlette\middleware\exceptions.py", line 68, in __call__
+    await self.app(scope, receive, sender)
+  File "C:\Users\vraje\AppData\Roaming\Python\Python313\site-packages\fastapi\middleware\asyncexitstack.py", line 20, in __call__
+    raise e
+  File "C:\Users\vraje\AppData\Roaming\Python\Python313\site-packages\fastapi\middleware\asyncexitstack.py", line 17, in __call__
+    await self.app(scope, receive, send)
+  File "C:\Users\vraje\AppData\Roaming\Python\Python313\site-packages\starlette\routing.py", line 718, in __call__
+    await route.handle(scope, receive, send)
+  File "C:\Users\vraje\AppData\Roaming\Python\Python313\site-packages\starlette\routing.py", line 276, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\vraje\AppData\Roaming\Python\Python313\site-packages\starlette\routing.py", line 66, in app
+    response = await func(request)
+               ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vraje\AppData\Roaming\Python\Python313\site-packages\fastapi\routing.py", line 274, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        dependant=dependant, values=values, is_coroutine=is_coroutine
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\vraje\AppData\Roaming\Python\Python313\site-packages\fastapi\routing.py", line 191, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Hacksmiths United\Vocentra\backend\api\upload_api.py", line 44, in try_demo
+    return json.load(f)
+           ^^^^
+NameError: name 'json' is not defined. Did you forget to import 'json'?
+2026-03-07 14:35:37,735 - vocentra - ERROR - Global error: name 'json' is not defined
+Traceback (most recent call last):
+  File "C:\Users\vraje\AppData\Roaming\Python\Python313\site-packages\starlette\middleware\errors.py", line 162, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\vraje\AppData\Roaming\Python\Python313\site-packages\starlette\middleware\cors.py", line 91, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "C:\Users\vraje\AppData\Roaming\Python\Python313\site-packages\starlette\middleware\cors.py", line 146, in simple_response
+    await self.app(scope, receive, send)
+  File "C:\Users\vraje\AppData\Roaming\Python\Python313\site-packages\starlette\middleware\exceptions.py", line 79, in __call__
+    raise exc
+  File "C:\Users\vraje\AppData\Roaming\Python\Python313\site-packages\starlette\middleware\exceptions.py", line 68, in __call__
+    await self.app(scope, receive, sender)
+  File "C:\Users\vraje\AppData\Roaming\Python\Python313\site-packages\fastapi\middleware\asyncexitstack.py", line 20, in __call__
+    raise e
+  File "C:\Users\vraje\AppData\Roaming\Python\Python313\site-packages\fastapi\middleware\asyncexitstack.py", line 17, in __call__
+    await self.app(scope, receive, send)
+  File "C:\Users\vraje\AppData\Roaming\Python\Python313\site-packages\starlette\routing.py", line 718, in __call__
+    await route.handle(scope, receive, send)
+  File "C:\Users\vraje\AppData\Roaming\Python\Python313\site-packages\starlette\routing.py", line 276, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\vraje\AppData\Roaming\Python\Python313\site-packages\starlette\routing.py", line 66, in app
+    response = await func(request)
+               ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vraje\AppData\Roaming\Python\Python313\site-packages\fastapi\routing.py", line 274, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        dependant=dependant, values=values, is_coroutine=is_coroutine
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\vraje\AppData\Roaming\Python\Python313\site-packages\fastapi\routing.py", line 191, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Hacksmiths United\Vocentra\backend\api\upload_api.py", line 44, in try_demo
+    return json.load(f)
+           ^^^^
+NameError: name 'json' is not defined. Did you forget to import 'json'?
+2026-03-07 14:35:40,746 - vocentra - ERROR - Global error: name 'json' is not defined
+Traceback (most recent call last):
+  File "C:\Users\vraje\AppData\Roaming\Python\Python313\site-packages\starlette\middleware\errors.py", line 162, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\vraje\AppData\Roaming\Python\Python313\site-packages\starlette\middleware\cors.py", line 91, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "C:\Users\vraje\AppData\Roaming\Python\Python313\site-packages\starlette\middleware\cors.py", line 146, in simple_response
+    await self.app(scope, receive, send)
+  File "C:\Users\vraje\AppData\Roaming\Python\Python313\site-packages\starlette\middleware\exceptions.py", line 79, in __call__
+    raise exc
+  File "C:\Users\vraje\AppData\Roaming\Python\Python313\site-packages\starlette\middleware\exceptions.py", line 68, in __call__
+    await self.app(scope, receive, sender)
+  File "C:\Users\vraje\AppData\Roaming\Python\Python313\site-packages\fastapi\middleware\asyncexitstack.py", line 20, in __call__
+    raise e
+  File "C:\Users\vraje\AppData\Roaming\Python\Python313\site-packages\fastapi\middleware\asyncexitstack.py", line 17, in __call__
+    await self.app(scope, receive, send)
+  File "C:\Users\vraje\AppData\Roaming\Python\Python313\site-packages\starlette\routing.py", line 718, in __call__
+    await route.handle(scope, receive, send)
+  File "C:\Users\vraje\AppData\Roaming\Python\Python313\site-packages\starlette\routing.py", line 276, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\vraje\AppData\Roaming\Python\Python313\site-packages\starlette\routing.py", line 66, in app
+    response = await func(request)
+               ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vraje\AppData\Roaming\Python\Python313\site-packages\fastapi\routing.py", line 274, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        dependant=dependant, values=values, is_coroutine=is_coroutine
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\vraje\AppData\Roaming\Python\Python313\site-packages\fastapi\routing.py", line 191, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Hacksmiths United\Vocentra\backend\api\upload_api.py", line 44, in try_demo
+    return json.load(f)
+           ^^^^
+NameError: name 'json' is not defined. Did you forget to import 'json'?
+2026-03-07 14:35:42,684 - vocentra - ERROR - Global error: name 'json' is not defined
+Traceback (most recent call last):
+  File "C:\Users\vraje\AppData\Roaming\Python\Python313\site-packages\starlette\middleware\errors.py", line 162, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\vraje\AppData\Roaming\Python\Python313\site-packages\starlette\middleware\cors.py", line 91, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "C:\Users\vraje\AppData\Roaming\Python\Python313\site-packages\starlette\middleware\cors.py", line 146, in simple_response
+    await self.app(scope, receive, send)
+  File "C:\Users\vraje\AppData\Roaming\Python\Python313\site-packages\starlette\middleware\exceptions.py", line 79, in __call__
+    raise exc
+  File "C:\Users\vraje\AppData\Roaming\Python\Python313\site-packages\starlette\middleware\exceptions.py", line 68, in __call__
+    await self.app(scope, receive, sender)
+  File "C:\Users\vraje\AppData\Roaming\Python\Python313\site-packages\fastapi\middleware\asyncexitstack.py", line 20, in __call__
+    raise e
+  File "C:\Users\vraje\AppData\Roaming\Python\Python313\site-packages\fastapi\middleware\asyncexitstack.py", line 17, in __call__
+    await self.app(scope, receive, send)
+  File "C:\Users\vraje\AppData\Roaming\Python\Python313\site-packages\starlette\routing.py", line 718, in __call__
+    await route.handle(scope, receive, send)
+  File "C:\Users\vraje\AppData\Roaming\Python\Python313\site-packages\starlette\routing.py", line 276, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\vraje\AppData\Roaming\Python\Python313\site-packages\starlette\routing.py", line 66, in app
+    response = await func(request)
+               ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vraje\AppData\Roaming\Python\Python313\site-packages\fastapi\routing.py", line 274, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        dependant=dependant, values=values, is_coroutine=is_coroutine
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\vraje\AppData\Roaming\Python\Python313\site-packages\fastapi\routing.py", line 191, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Hacksmiths United\Vocentra\backend\api\upload_api.py", line 44, in try_demo
+    return json.load(f)
+           ^^^^
+NameError: name 'json' is not defined. Did you forget to import 'json'?
+2026-03-07 14:35:57,325 - vocentra - INFO - Created new job: job_faff41a1
+2026-03-07 14:35:57,343 - vocentra - INFO - Job job_faff41a1 status updated to: processing
+2026-03-07 14:35:57,344 - vocentra - INFO - [job_faff41a1] Step 1: Extracting audio and frames...
+2026-03-07 14:35:58,850 - vocentra - INFO - Audio extracted to D:\Hacksmiths United\Vocentra\backend\storage\temp\job_faff41a1\audio.wav
+2026-03-07 14:36:00,117 - vocentra - INFO - Extracted 4 frames to D:\Hacksmiths United\Vocentra\backend\storage\temp\job_faff41a1\frames
+2026-03-07 14:36:00,118 - vocentra - INFO - [job_faff41a1] Step 2: Transcribing audio...
+2026-03-07 14:36:05,175 - vocentra - INFO - [job_faff41a1] Step 3: Analyzing visual content...
+2026-03-07 14:36:13,296 - vocentra - ERROR - [job_faff41a1] Pipeline failed: too many values to unpack (expected 2)
+2026-03-07 14:36:13,297 - vocentra - INFO - Job job_faff41a1 status updated to: failed
+2026-03-07 14:44:24,659 - vocentra - ERROR - Global error: name 'json' is not defined
+Traceback (most recent call last):
+  File "C:\Users\vraje\AppData\Roaming\Python\Python313\site-packages\starlette\middleware\errors.py", line 162, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\vraje\AppData\Roaming\Python\Python313\site-packages\starlette\middleware\cors.py", line 91, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "C:\Users\vraje\AppData\Roaming\Python\Python313\site-packages\starlette\middleware\cors.py", line 146, in simple_response
+    await self.app(scope, receive, send)
+  File "C:\Users\vraje\AppData\Roaming\Python\Python313\site-packages\starlette\middleware\exceptions.py", line 79, in __call__
+    raise exc
+  File "C:\Users\vraje\AppData\Roaming\Python\Python313\site-packages\starlette\middleware\exceptions.py", line 68, in __call__
+    await self.app(scope, receive, sender)
+  File "C:\Users\vraje\AppData\Roaming\Python\Python313\site-packages\fastapi\middleware\asyncexitstack.py", line 20, in __call__
+    raise e
+  File "C:\Users\vraje\AppData\Roaming\Python\Python313\site-packages\fastapi\middleware\asyncexitstack.py", line 17, in __call__
+    await self.app(scope, receive, send)
+  File "C:\Users\vraje\AppData\Roaming\Python\Python313\site-packages\starlette\routing.py", line 718, in __call__
+    await route.handle(scope, receive, send)
+  File "C:\Users\vraje\AppData\Roaming\Python\Python313\site-packages\starlette\routing.py", line 276, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\vraje\AppData\Roaming\Python\Python313\site-packages\starlette\routing.py", line 66, in app
+    response = await func(request)
+               ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vraje\AppData\Roaming\Python\Python313\site-packages\fastapi\routing.py", line 274, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        dependant=dependant, values=values, is_coroutine=is_coroutine
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\vraje\AppData\Roaming\Python\Python313\site-packages\fastapi\routing.py", line 191, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Hacksmiths United\Vocentra\backend\api\upload_api.py", line 44, in try_demo
+    return json.load(f)
+           ^^^^
+NameError: name 'json' is not defined. Did you forget to import 'json'?
+2026-03-07 14:45:00,512 - vocentra - INFO - Initializing AI models for the first time...
+2026-03-07 14:45:00,513 - vocentra - INFO - Loading Whisper model: base
+2026-03-07 14:45:01,757 - vocentra - INFO - Loading BLIP model: Salesforce/blip-image-captioning-base
+2026-03-07 14:45:04,669 - vocentra - INFO - Loading CLIP model: openai/clip-vit-base-patch32
+2026-03-07 14:45:07,463 - vocentra - INFO - Loading SentenceTransformer model...
+2026-03-07 14:45:10,956 - vocentra - INFO - Initializing YOLOv8 Object Detection Model...
+2026-03-07 14:45:11,039 - vocentra - INFO - Initializing EasyOCR Model...
+2026-03-07 14:45:13,992 - vocentra - INFO - Initializing Action Detection Model (Standardized)...
+2026-03-07 14:45:13,992 - vocentra - INFO - All AI models initialized successfully.
+2026-03-07 14:45:13,995 - vocentra - ERROR - Global error: name 'json' is not defined
+Traceback (most recent call last):
+  File "C:\Users\vraje\AppData\Roaming\Python\Python313\site-packages\starlette\middleware\errors.py", line 162, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\vraje\AppData\Roaming\Python\Python313\site-packages\starlette\middleware\cors.py", line 91, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "C:\Users\vraje\AppData\Roaming\Python\Python313\site-packages\starlette\middleware\cors.py", line 146, in simple_response
+    await self.app(scope, receive, send)
+  File "C:\Users\vraje\AppData\Roaming\Python\Python313\site-packages\starlette\middleware\exceptions.py", line 79, in __call__
+    raise exc
+  File "C:\Users\vraje\AppData\Roaming\Python\Python313\site-packages\starlette\middleware\exceptions.py", line 68, in __call__
+    await self.app(scope, receive, sender)
+  File "C:\Users\vraje\AppData\Roaming\Python\Python313\site-packages\fastapi\middleware\asyncexitstack.py", line 20, in __call__
+    raise e
+  File "C:\Users\vraje\AppData\Roaming\Python\Python313\site-packages\fastapi\middleware\asyncexitstack.py", line 17, in __call__
+    await self.app(scope, receive, send)
+  File "C:\Users\vraje\AppData\Roaming\Python\Python313\site-packages\starlette\routing.py", line 718, in __call__
+    await route.handle(scope, receive, send)
+  File "C:\Users\vraje\AppData\Roaming\Python\Python313\site-packages\starlette\routing.py", line 276, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\vraje\AppData\Roaming\Python\Python313\site-packages\starlette\routing.py", line 66, in app
+    response = await func(request)
+               ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vraje\AppData\Roaming\Python\Python313\site-packages\fastapi\routing.py", line 274, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        dependant=dependant, values=values, is_coroutine=is_coroutine
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\vraje\AppData\Roaming\Python\Python313\site-packages\fastapi\routing.py", line 191, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Hacksmiths United\Vocentra\backend\api\upload_api.py", line 44, in try_demo
+    return json.load(f)
+           ^^^^
+NameError: name 'json' is not defined. Did you forget to import 'json'?
+2026-03-07 14:45:14,012 - vocentra - ERROR - Global error: name 'json' is not defined
+Traceback (most recent call last):
+  File "C:\Users\vraje\AppData\Roaming\Python\Python313\site-packages\starlette\middleware\errors.py", line 162, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\vraje\AppData\Roaming\Python\Python313\site-packages\starlette\middleware\cors.py", line 91, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "C:\Users\vraje\AppData\Roaming\Python\Python313\site-packages\starlette\middleware\cors.py", line 146, in simple_response
+    await self.app(scope, receive, send)
+  File "C:\Users\vraje\AppData\Roaming\Python\Python313\site-packages\starlette\middleware\exceptions.py", line 79, in __call__
+    raise exc
+  File "C:\Users\vraje\AppData\Roaming\Python\Python313\site-packages\starlette\middleware\exceptions.py", line 68, in __call__
+    await self.app(scope, receive, sender)
+  File "C:\Users\vraje\AppData\Roaming\Python\Python313\site-packages\fastapi\middleware\asyncexitstack.py", line 20, in __call__
+    raise e
+  File "C:\Users\vraje\AppData\Roaming\Python\Python313\site-packages\fastapi\middleware\asyncexitstack.py", line 17, in __call__
+    await self.app(scope, receive, send)
+  File "C:\Users\vraje\AppData\Roaming\Python\Python313\site-packages\starlette\routing.py", line 718, in __call__
+    await route.handle(scope, receive, send)
+  File "C:\Users\vraje\AppData\Roaming\Python\Python313\site-packages\starlette\routing.py", line 276, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\vraje\AppData\Roaming\Python\Python313\site-packages\starlette\routing.py", line 66, in app
+    response = await func(request)
+               ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vraje\AppData\Roaming\Python\Python313\site-packages\fastapi\routing.py", line 274, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        dependant=dependant, values=values, is_coroutine=is_coroutine
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\vraje\AppData\Roaming\Python\Python313\site-packages\fastapi\routing.py", line 191, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Hacksmiths United\Vocentra\backend\api\upload_api.py", line 44, in try_demo
+    return json.load(f)
+           ^^^^
+NameError: name 'json' is not defined. Did you forget to import 'json'?
+2026-03-07 14:45:14,022 - vocentra - ERROR - Global error: name 'json' is not defined
+Traceback (most recent call last):
+  File "C:\Users\vraje\AppData\Roaming\Python\Python313\site-packages\starlette\middleware\errors.py", line 162, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\vraje\AppData\Roaming\Python\Python313\site-packages\starlette\middleware\cors.py", line 91, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "C:\Users\vraje\AppData\Roaming\Python\Python313\site-packages\starlette\middleware\cors.py", line 146, in simple_response
+    await self.app(scope, receive, send)
+  File "C:\Users\vraje\AppData\Roaming\Python\Python313\site-packages\starlette\middleware\exceptions.py", line 79, in __call__
+    raise exc
+  File "C:\Users\vraje\AppData\Roaming\Python\Python313\site-packages\starlette\middleware\exceptions.py", line 68, in __call__
+    await self.app(scope, receive, sender)
+  File "C:\Users\vraje\AppData\Roaming\Python\Python313\site-packages\fastapi\middleware\asyncexitstack.py", line 20, in __call__
+    raise e
+  File "C:\Users\vraje\AppData\Roaming\Python\Python313\site-packages\fastapi\middleware\asyncexitstack.py", line 17, in __call__
+    await self.app(scope, receive, send)
+  File "C:\Users\vraje\AppData\Roaming\Python\Python313\site-packages\starlette\routing.py", line 718, in __call__
+    await route.handle(scope, receive, send)
+  File "C:\Users\vraje\AppData\Roaming\Python\Python313\site-packages\starlette\routing.py", line 276, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\vraje\AppData\Roaming\Python\Python313\site-packages\starlette\routing.py", line 66, in app
+    response = await func(request)
+               ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vraje\AppData\Roaming\Python\Python313\site-packages\fastapi\routing.py", line 274, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        dependant=dependant, values=values, is_coroutine=is_coroutine
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\vraje\AppData\Roaming\Python\Python313\site-packages\fastapi\routing.py", line 191, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Hacksmiths United\Vocentra\backend\api\upload_api.py", line 44, in try_demo
+    return json.load(f)
+           ^^^^
+NameError: name 'json' is not defined. Did you forget to import 'json'?
+2026-03-07 14:45:14,036 - vocentra - ERROR - Global error: name 'json' is not defined
+Traceback (most recent call last):
+  File "C:\Users\vraje\AppData\Roaming\Python\Python313\site-packages\starlette\middleware\errors.py", line 162, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\vraje\AppData\Roaming\Python\Python313\site-packages\starlette\middleware\cors.py", line 91, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "C:\Users\vraje\AppData\Roaming\Python\Python313\site-packages\starlette\middleware\cors.py", line 146, in simple_response
+    await self.app(scope, receive, send)
+  File "C:\Users\vraje\AppData\Roaming\Python\Python313\site-packages\starlette\middleware\exceptions.py", line 79, in __call__
+    raise exc
+  File "C:\Users\vraje\AppData\Roaming\Python\Python313\site-packages\starlette\middleware\exceptions.py", line 68, in __call__
+    await self.app(scope, receive, sender)
+  File "C:\Users\vraje\AppData\Roaming\Python\Python313\site-packages\fastapi\middleware\asyncexitstack.py", line 20, in __call__
+    raise e
+  File "C:\Users\vraje\AppData\Roaming\Python\Python313\site-packages\fastapi\middleware\asyncexitstack.py", line 17, in __call__
+    await self.app(scope, receive, send)
+  File "C:\Users\vraje\AppData\Roaming\Python\Python313\site-packages\starlette\routing.py", line 718, in __call__
+    await route.handle(scope, receive, send)
+  File "C:\Users\vraje\AppData\Roaming\Python\Python313\site-packages\starlette\routing.py", line 276, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\vraje\AppData\Roaming\Python\Python313\site-packages\starlette\routing.py", line 66, in app
+    response = await func(request)
+               ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vraje\AppData\Roaming\Python\Python313\site-packages\fastapi\routing.py", line 274, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        dependant=dependant, values=values, is_coroutine=is_coroutine
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\vraje\AppData\Roaming\Python\Python313\site-packages\fastapi\routing.py", line 191, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Hacksmiths United\Vocentra\backend\api\upload_api.py", line 44, in try_demo
+    return json.load(f)
+           ^^^^
+NameError: name 'json' is not defined. Did you forget to import 'json'?
+2026-03-07 14:45:14,108 - vocentra - INFO - Created new job: job_d031d68a
+2026-03-07 14:45:14,120 - vocentra - INFO - Job job_d031d68a status updated to: processing (%)
+2026-03-07 14:45:14,121 - vocentra - INFO - [job_d031d68a] Step 1: Extracting audio and frames...
+2026-03-07 14:45:14,122 - vocentra - INFO - Job job_d031d68a status updated to: processing (20%)
+2026-03-07 14:45:14,429 - vocentra - INFO - Audio extracted to D:\Hacksmiths United\Vocentra\backend\storage\temp\job_d031d68a\audio.wav
+2026-03-07 14:45:14,430 - vocentra - INFO - Job job_d031d68a status updated to: processing (55%)
+2026-03-07 14:45:15,221 - vocentra - INFO - Extracted 4 frames to D:\Hacksmiths United\Vocentra\backend\storage\temp\job_d031d68a\frames
+2026-03-07 14:45:15,224 - vocentra - INFO - [job_d031d68a] Step 2: Transcribing audio...
+2026-03-07 14:45:23,151 - vocentra - INFO - Job job_d031d68a status updated to: processing (40%)
+2026-03-07 14:45:23,152 - vocentra - INFO - [job_d031d68a] Step 3: Analyzing visual content...
+2026-03-07 14:45:23,211 - vocentra - INFO - Job job_d031d68a status updated to: processing (70%)
+2026-03-07 14:45:36,942 - vocentra - INFO - Job job_d031d68a status updated to: processing (73%)
+2026-03-07 14:45:43,739 - vocentra - INFO - Job job_d031d68a status updated to: processing (77%)
+2026-03-07 14:45:49,045 - vocentra - INFO - Job job_d031d68a status updated to: processing (81%)
+2026-03-07 14:45:54,449 - vocentra - INFO - Job job_d031d68a status updated to: processing (85%)
+2026-03-07 14:45:54,450 - vocentra - INFO - [job_d031d68a] Step 4: Building semantic video script...
+2026-03-07 14:45:54,450 - vocentra - INFO - Generating High-Fidelity Semantic Video Script...
+2026-03-07 14:45:54,451 - vocentra - INFO - Job job_d031d68a status updated to: processing (95%)
+2026-03-07 14:45:54,451 - vocentra - INFO - [job_d031d68a] Step 5: Calculating similarity...
+2026-03-07 14:45:54,565 - vocentra - INFO - Job job_d031d68a status updated to: processing (100%)
+2026-03-07 14:45:54,567 - vocentra - INFO - [job_d031d68a] Step 6: Cleaning up ALL temporary files...
+2026-03-07 14:45:54,570 - vocentra - INFO - [job_d031d68a] Cleanup complete for job temp directory.
+2026-03-07 14:45:54,570 - vocentra - ERROR - [job_d031d68a] Pipeline failed: name 'torch' is not defined
+2026-03-07 14:45:54,571 - vocentra - INFO - Job job_d031d68a status updated to: failed (%)

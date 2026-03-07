@@ -1,8 +1,8 @@
 fastapi
-uvicorn
+uvicorn[standard]
 python-multipart
 pydantic-settings
-opencv-python-headless
+opencv-python
 openai-whisper
 torch --index-url https://download.pytorch.org/whl/cpu
 transformers
@@ -11,4 +11,7 @@ Pillow
 numpy
 scikit-learn
 gunicorn
-
+ultralytics
+easyocr
+clip-by-openai
+python-dotenv

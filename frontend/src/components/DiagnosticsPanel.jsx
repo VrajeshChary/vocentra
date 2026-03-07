@@ -69,34 +69,39 @@ export default function DiagnosticsPanel({ data }) {
         </button>
       </div>
 
-      {showDebug && (
-        <div style={{ marginTop: "1.5rem", textAlign: "left" }}>
-          <div
-            style={{
-              fontSize: "0.75rem",
-              color: "var(--text-muted)",
-              marginBottom: "0.5rem",
-            }}
-          >
-            Raw API Response (Adapter Transformed):
-          </div>
-          <pre
-            style={{
-              background: "rgba(0,0,0,0.5)",
-              padding: "1rem",
-              borderRadius: "8px",
-              fontSize: "0.7rem",
-              color: "var(--accent)",
-              overflowX: "auto",
-              maxHeight: "300px",
-              overflowY: "auto",
-              border: "1px solid var(--glass-border)",
-            }}
-          >
-            {JSON.stringify(data, null, 2)}
-          </pre>
+      <div style={{ marginTop: "1.5rem", textAlign: "left" }}>
+        <div
+          style={{
+            fontSize: "0.75rem",
+            color: "var(--text-muted)",
+            marginBottom: "0.5rem",
+            display: "flex",
+            justifyContent: "space-between",
+          }}
+        >
+          <span>Raw System Context:</span>
+          <span style={{ color: "var(--accent)" }}>
+            Pipeline: {data.processing.version || "2.1-prod"}
+          </span>
         </div>
-      )}
+        <pre
+          style={{
+            background: "rgba(0,0,0,0.5)",
+            padding: "1.2rem",
+            borderRadius: "8px",
+            fontSize: "0.7rem",
+            fontFamily: "monospace",
+            color: "#33ff33",
+            overflowX: "auto",
+            maxHeight: "350px",
+            overflowY: "auto",
+            border: "1px solid rgba(51, 255, 51, 0.2)",
+            boxShadow: "inset 0 0 10px rgba(0,0,0,0.5)",
+          }}
+        >
+          {JSON.stringify(data, null, 2)}
+        </pre>
+      </div>
     </div>
   );
 }

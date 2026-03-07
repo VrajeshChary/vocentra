@@ -28,10 +28,10 @@ class ModelManager:
         self.visual = VisualModel(self.device).load()
         self.similarity = SimilarityModel(self.device).load()
         
-        # Lightweight/Mock models
-        self.objects = ObjectDetectionModel().load()
-        self.ocr = OCRModel().load()
-        self.action = ActionModel().load()
+        # Lightweight/Integrated models
+        self.objects = ObjectDetectionModel(self.device).load()
+        self.ocr = OCRModel(self.device).load()
+        self.action = ActionModel(self.device).load()
         
         self._initialized = True
         logger.info("All AI models initialized successfully.")

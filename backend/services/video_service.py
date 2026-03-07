@@ -65,4 +65,8 @@ class VideoService:
                 extracted_paths.append(str(frame_path))
                 
             count += 1
-       
+            
+        cap.release()
+        logger.info(f"Extracted {len(extracted_paths)} frames to {frames_dir}")
+        return extracted_paths
+

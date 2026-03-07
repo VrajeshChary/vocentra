@@ -1,4 +1,4 @@
-const API_BASE = "http://localhost:8000";
+const API_URL = import.meta.env.VITE_API_URL || "http://localhost:8000";
 
 /**
  * Transforms backend standardized JSON to the format expected by the UI panels
@@ -81,7 +81,7 @@ export const uploadVideo = async (file, topic = "", signal = null) => {
   formData.append("file", file);
   formData.append("reference_answer", topic || "No specific topic provided");
 
-  const res = await fetch(`${API_BASE}/upload-video`, {
+  const res = await fetch(`${API_URL}/upload-video`, {
     method: "POST",
     body: formData,
     signal: signal,
@@ -95,13 +95,13 @@ export const uploadVideo = async (file, topic = "", signal = null) => {
 };
 
 export const getJobStatus = async (jobId) => {
-  const res = await fetch(`${API_BASE}/status/${jobId}`);
+  const res = await fetch(`${API_URL}/status/${jobId}`);
   if (!res.ok) return { status: "error" };
   return await res.json();
 };
 
 export const getJobResults = async (jobId) => {
-  const res = await fetch(`${API_BASE}/results/${jobId}`);
+  const res = await fetch(`${API_URL}/results/${jobId}`);
   if (!res.ok) throw new Error("Failed to fetch results");
 
   const rawData = await res.json();
@@ -127,9 +127,20 @@ export const fetchResults = async (jobId) => {
   return sampleResponse;
 };
 
+export const tryDemo = async () => {
+  const res = await fetch(`${API_URL}/try-demo`, {
+    method: "POST",
+  });
+  if (!res.ok) throw new Error("Failed to load demo");
+  const rawData = await res.json();
+  const adapted = adaptBackendData(rawData);
+  sessionStorage.setItem("vocentra_latest_result", JSON.stringify(adapted));
+  return adapted;
+};
+
 export const checkHealth = async () => {
   try {
-    const res = await fetch(`${API_BASE}/health`);
+    const res = await fetch(`${API_URL}/health`);
     return { status: res.ok ? "ok" : "error", local: true };
   } catch (error) {
     return { status: "error" };
