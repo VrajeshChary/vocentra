@@ -1,0 +1,52 @@
+export default function handler(req, res) {
+  const sampleResults = {
+    transcript: "Welcome to this Vocentra demo. Today we will demonstrate the multimodal video understanding capabilities of our engine across visual scenes, objects, and speech.",
+    speakers: [{ speaker: "Presenter", start: 0, end: 15 }],
+    visual_context: [
+      {
+        timestamp: "00:00",
+        objects: ["laptop", "desk", "human"],
+        actions: ["typing", "explaining"],
+        ocr_text: ["Vocentra AI", "Multimodal Engine"],
+        caption: "A person is typing on a laptop and explaining the Vocentra AI concepts."
+      },
+      {
+        timestamp: "00:10",
+        objects: ["whiteboard", "marker"],
+        actions: ["drawing"],
+        ocr_text: ["Architecture Diagram"],
+        caption: "The focus shifts to a whiteboard showing an architecture diagram."
+      }
+    ],
+    semantic_script: {
+      metadata: { source: "Vocentra Multimodal Engine", version: "2.0-scalable" },
+      scene: "classroom/studio",
+      characters: ["presenter"],
+      global_context: {
+        total_objects: ["laptop", "desk", "human", "whiteboard", "marker"],
+        primary_actions: ["typing", "explaining", "drawing"]
+      },
+      timeline: [
+        {
+          timestamp: "00:00",
+          speech: "Welcome to this Vocentra demo.",
+          objects: ["laptop", "desk", "human"],
+          actions: ["typing", "explaining"],
+          visual_text: ["Vocentra AI", "Multimodal Engine"],
+          visual_context: "A person is typing on a laptop and explaining the Vocentra AI concepts."
+        },
+        {
+          timestamp: "00:10",
+          speech: "Today we will demonstrate the multimodal... capabilities.",
+          objects: ["whiteboard", "marker"],
+          actions: ["drawing"],
+          visual_text: ["Architecture Diagram"],
+          visual_context: "The focus shifts to a whiteboard showing an architecture diagram."
+        }
+      ]
+    },
+    similarity_score: 0.95
+  };
+
+  res.status(200).json(sampleResults);
+}

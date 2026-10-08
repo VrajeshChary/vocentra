@@ -1,0 +1,9 @@
+{
+  "name": "vocentra",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Multimodal Video Understanding & Semantic Evaluation Platform",
+  "scripts": {
+    "build": "cd frontend && npm install && npm run build"
+  }
+}

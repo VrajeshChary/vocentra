@@ -254,6 +254,7 @@ function animateArc(arc, pctEl, target, duration) {
 
 // ── Results Page ──────────────────────────────────────────────
 function initResults() {
+  if (!document.getElementById("verdictText")) return; // Only run on legacy non-React page
   const raw = sessionStorage.getItem("vc_result");
   const data = raw ? JSON.parse(raw) : mockData();
 

@@ -2,6 +2,7 @@ from fastapi import APIRouter, UploadFile, File, Form, HTTPException, Background
 from pathlib import Path
 import uuid
 import shutil
+import json
 from configs.config import settings
 from backend.services.job_manager import job_manager
 from backend.utils.file_manager import FileManager

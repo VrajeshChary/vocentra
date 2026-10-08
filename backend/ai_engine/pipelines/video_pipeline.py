@@ -1,5 +1,6 @@
 import os
 import json
+import torch
 from pathlib import Path
 from configs.config import settings
 from backend.utils.logger import logger

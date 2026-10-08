@@ -42,6 +42,11 @@ app.include_router(upload_api.router, tags=["Upload"])
 app.include_router(status_api.router, tags=["Status"])
 app.include_router(results_api.router, tags=["Results"])
 
+@app.get("/health")
+async def health_check():
+    return {"status": "ok", "service": "vocentra-ai-backend"}
+
+
 # Mount static files and templates
 # Phase 3 & 13: Correct pathing to modular frontend
 STATIC_DIR = Path(__file__).resolve().parent.parent / "frontend" / "static"

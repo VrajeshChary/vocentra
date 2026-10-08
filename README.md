@@ -100,6 +100,16 @@ Vocentra generates a structured "Semantic Script" including:
     npm run dev
     ```
 
+## 🌐 Deploy to Vercel
+
+Vocentra is ready for instant deployment on [Vercel](https://vercel.com):
+
+1. Import this repository in the Vercel dashboard.
+2. Root Directory: leave as project root (or select `frontend`).
+3. Build Command: `cd frontend && npm run build` (automatic).
+4. Output Directory: `frontend/dist`.
+5. Deploy! The frontend runs with interactive demo mode and built-in serverless endpoints.
+
 ---
 
 ## 👨‍💻 The Team — Hacksmiths United

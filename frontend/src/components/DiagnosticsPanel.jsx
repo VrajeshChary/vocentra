@@ -24,7 +24,7 @@ export default function DiagnosticsPanel({ data }) {
       <div
         style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "1rem" }}
       >
-        {data.processing.stages.map((stage, i) => (
+        {(data.processing?.stages || data.processing?.steps || []).map((stage, i) => (
           <div
             key={i}
             style={{
@@ -35,16 +35,16 @@ export default function DiagnosticsPanel({ data }) {
               paddingBottom: "0.5rem",
             }}
           >
-            <span style={{ color: "var(--text-secondary)" }}>{stage.name}</span>
+            <span style={{ color: "var(--text-secondary)" }}>{stage.name || stage.label || `Stage ${i + 1}`}</span>
             <span
               style={{
                 color:
-                  stage.status === "success"
+                  (stage.status === "success" || stage.status === "completed")
                     ? "var(--success)"
                     : "var(--danger)",
               }}
             >
-              {stage.duration}s
+              {stage.duration !== undefined ? `${stage.duration}s` : `${stage.progress || 100}%`}
             </span>
           </div>
         ))}

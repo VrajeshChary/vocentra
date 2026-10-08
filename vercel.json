@@ -1,0 +1,14 @@
+{
+  "buildCommand": "cd frontend && npm install && npm run build",
+  "outputDirectory": "frontend/dist",
+  "cleanUrls": true,
+  "rewrites": [
+    { "source": "/upload-video", "destination": "/api/upload-video" },
+    { "source": "/status/:id*", "destination": "/api/status" },
+    { "source": "/results/:id*", "destination": "/api/results" },
+    { "source": "/try-demo", "destination": "/api/try-demo" },
+    { "source": "/health", "destination": "/api/health" },
+    { "source": "/upload", "destination": "/upload.html" },
+    { "source": "/result", "destination": "/result.html" }
+  ]
+}

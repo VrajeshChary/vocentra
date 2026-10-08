@@ -36,9 +36,9 @@ export default function UploadDropzone({ onStart }) {
   const handleFileSelected = (selectedFile) => {
     setError(null);
     setUploadProgress(0);
-    // Point 21: Client validation
-    if (selectedFile.size > 500 * 1024 * 1024) {
-      setError("Video too large — max 500MB.");
+    // Client validation synced with backend
+    if (selectedFile.size > 50 * 1024 * 1024) {
+      setError("Video too large — max 50MB.");
       return;
     }
     const validTypes = [
@@ -46,15 +46,18 @@ export default function UploadDropzone({ onStart }) {
       "video/quicktime",
       "video/webm",
       "video/x-matroska",
-      "audio/mpeg",
-      "audio/wav",
-      "audio/x-m4a",
     ];
     if (!validTypes.includes(selectedFile.type)) {
       setError(
-        "Unsupported codec. Please use MP4, MOV, WEBM, or standard audio formats.",
+        "Unsupported format. Please upload MP4, MOV, or WEBM video.",
       );
       return;
+    }
+    try {
+      const objUrl = URL.createObjectURL(selectedFile);
+      sessionStorage.setItem("vocentra_uploaded_video_url", objUrl);
+    } catch (e) {
+      // Ignore URL creation error
     }
     setFile(selectedFile);
   };

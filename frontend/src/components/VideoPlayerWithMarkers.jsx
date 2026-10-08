@@ -3,6 +3,9 @@ import React, { useRef, useState, useEffect } from "react";
 export default function VideoPlayerWithMarkers({ data }) {
   const videoRef = useRef(null);
   const [duration, setDuration] = useState(25); // Mock fallback duration
+  const [videoSrc, setVideoSrc] = useState(
+    () => sessionStorage.getItem("vocentra_uploaded_video_url") || "/assets/sample_lecture.mp4"
+  );
 
   useEffect(() => {
     if (videoRef.current) {
@@ -114,8 +117,13 @@ export default function VideoPlayerWithMarkers({ data }) {
         <video
           ref={videoRef}
           controls
-          src="https://www.w3schools.com/html/mov_bbb.mp4"
+          src={videoSrc}
           crossOrigin="anonymous"
+          onError={() => {
+            if (videoSrc !== "/assets/sample_lecture.mp4") {
+              setVideoSrc("/assets/sample_lecture.mp4");
+            }
+          }}
           style={{
             width: "100%",
             height: "100%",

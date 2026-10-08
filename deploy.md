@@ -1,35 +1,47 @@
-# Vocentra Deploy Instructions
+# 🚀 Vocentra Deployment Guide
 
-## 1. Local Demo (Development)
+## 1. Deploying Frontend to Vercel (Recommended)
 
-The fastest way to test and demo the frontend during development:
+Vocentra is pre-configured for one-click deployment on **Vercel**.
 
+### Quick Steps:
+1. Push your repository to GitHub.
+2. Go to your [Vercel Dashboard](https://vercel.com/dashboard) and click **"Add New Project"**.
+3. Import the `vocentra` repository.
+4. **Project Settings**:
+   - **Framework Preset**: `Vite` (auto-detected)
+   - **Build Command**: `cd frontend && npm run build` (or leave default if Root Directory is `frontend`)
+   - **Output Directory**: `frontend/dist` (or `dist` if Root Directory is `frontend`)
+5. **Environment Variables** (Optional):
+   - `VITE_API_URL`: URL of your live FastAPI backend (e.g. `https://your-api.onrender.com`).
+   - *Note: If no external backend is configured, Vocentra automatically runs in interactive demo mode on Vercel with built-in serverless endpoints in `/api`.*
+6. Click **Deploy**.
+
+---
+
+## 2. Local Development
+
+### Run Backend (FastAPI):
 ```bash
+pip install -r requirements.txt
+python run.py
+```
+Backend starts on `http://localhost:8000`.
+
+### Run Frontend (Vite Dev Server):
+```bash
+cd frontend
 npm install
 npm run dev
 ```
+Frontend launches at `http://localhost:5173`.
 
-## 2. Production Build
+---
 
-If you need to ship a static version or integrate deeply with a Flask/Python backend, you can build the project statically:
+## 3. Production Local Build
 
+To test the production build locally:
 ```bash
 npm run build
 ```
-
-This generates a `dist/` folder. All assets in `dist/` are minified and optimized.
-
-## 3. Integrating `dist/` with Python Backend
-
-If you want to serve the built files natively via a Python server:
-
-1. Copy the contents of `dist/assets` to your backend's `static/` directory.
-2. Copy `dist/index.html`, `dist/upload.html`, and `dist/result.html` to your `templates/` directory.
-3. Update the Python endpoints to render those newly built templates.
-
-## 4. Environment Variables
-
-If your API base URL changes depending on the environment:
-
-1. Create a `.env` file containing `VITE_API_BASE_URL=https://api.vocentra.com`
-2. Update `apiClient.js` to use `import.meta.env.VITE_API_BASE_URL || '/api'`
+This generates the optimized bundle in `frontend/dist`.

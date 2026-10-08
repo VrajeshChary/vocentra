@@ -16,6 +16,7 @@ const DiagnosticsPanel = lazy(() => import("../components/DiagnosticsPanel"));
 // Modals can be static or lazy, keeping static for fast interactions
 import SettingsModal from "../components/SettingsModal";
 import ModalExport from "../components/ModalExport";
+import ErrorBoundary from "../components/ErrorBoundary";
 
 function ResultApp() {
   const [data, setData] = useState(null);
@@ -105,60 +106,62 @@ function ResultApp() {
           alignItems: "start",
         }}
       >
-        <Suspense
-          fallback={
-            <div
-              style={{
-                gridColumn: "1 / -1",
-                textAlign: "center",
-                padding: "2rem",
-                color: "var(--text-secondary)",
-              }}
-            >
+        <ErrorBoundary>
+          <Suspense
+            fallback={
               <div
-                className="proc-ring"
                 style={{
-                  animation: "spin 2s linear infinite",
-                  width: 30,
-                  height: 30,
-                  margin: "0 auto",
-                  borderRadius: "50%",
-                  border: "2px solid var(--accent)",
-                  borderTopColor: "transparent",
+                  gridColumn: "1 / -1",
+                  textAlign: "center",
+                  padding: "2rem",
+                  color: "var(--text-secondary)",
                 }}
-              ></div>
-            </div>
-          }
-        >
-          {/* Left Column */}
-          <div
-            className="d-col-main"
-            style={{ display: "flex", flexDirection: "column", gap: "1.5rem" }}
+              >
+                <div
+                  className="proc-ring"
+                  style={{
+                    animation: "spin 2s linear infinite",
+                    width: 30,
+                    height: 30,
+                    margin: "0 auto",
+                    borderRadius: "50%",
+                    border: "2px solid var(--accent)",
+                    borderTopColor: "transparent",
+                  }}
+                ></div>
+              </div>
+            }
           >
-            <VideoPlayerWithMarkers data={data} />
-
+            {/* Left Column */}
             <div
-              style={{
-                display: "grid",
-                gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))",
-                gap: "1.5rem",
-              }}
+              className="d-col-main"
+              style={{ display: "flex", flexDirection: "column", gap: "1.5rem" }}
             >
-              <VisualContextPanel data={data} />
-              <TranscriptPanel data={data} />
+              <VideoPlayerWithMarkers data={data} />
+
+              <div
+                style={{
+                  display: "grid",
+                  gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))",
+                  gap: "1.5rem",
+                }}
+              >
+                <VisualContextPanel data={data} />
+                <TranscriptPanel data={data} />
+              </div>
+
+              <DiagnosticsPanel data={data} />
             </div>
 
-            <DiagnosticsPanel data={data} />
-          </div>
-
-          {/* Right Column */}
-          <div
-            className="d-col-sidebar"
-            style={{ display: "flex", flexDirection: "column", gap: "1.5rem" }}
-          >
-            <SimilarityPanel data={data} />
-          </div>
-        </Suspense>
+            {/* Right Column */}
+            <div
+              className="d-col-sidebar"
+              style={{ display: "flex", flexDirection: "column", gap: "1.5rem" }}
+            >
+              <SimilarityPanel data={data} />
+            </div>
+          </Suspense>
+        </ErrorBoundary>
       </div>
     </>
   );
